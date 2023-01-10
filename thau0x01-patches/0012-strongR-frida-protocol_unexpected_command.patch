@@ -1,0 +1,25 @@
+From 7b7b805750c4414410a4f82db5bd47d5b59d2733 Mon Sep 17 00:00:00 2001
+From: hluwa <hluwa888@gmail.com>
+Date: Mon, 16 Aug 2021 10:55:11 +0800
+Subject: [PATCH 12/13] strongR-frida: protocol_unexpected_command
+
+---
+ src/droidy/droidy-client.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/droidy/droidy-client.vala b/src/droidy/droidy-client.vala
+index 0ed2edeb..7fc220b9 100644
+--- a/src/droidy/droidy-client.vala
++++ b/src/droidy/droidy-client.vala
+@@ -1013,7 +1013,7 @@ namespace Frida.Droidy {
+ 						case "OPEN":
+ 						case "CLSE":
+ 						case "WRTE":
+-							throw new Error.PROTOCOL ("Unexpected command");
++							break; //throw new Error.PROTOCOL ("Unexpected command");
+ 
+ 						default:
+ 							var length = parse_length (command_or_length);
+-- 
+2.39.0
+

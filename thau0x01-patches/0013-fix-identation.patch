@@ -1,0 +1,35 @@
+From 529172d3637cab7e6a2170caea5b8f69b4a6a6a3 Mon Sep 17 00:00:00 2001
+From: thau0x01 <thau0x01@hackware.tech>
+Date: Tue, 10 Jan 2023 18:11:29 -0300
+Subject: [PATCH 13/13] fix identation
+
+---
+ lib/base/rpc.vala | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/lib/base/rpc.vala b/lib/base/rpc.vala
+index 542fe7cb..02602abf 100644
+--- a/lib/base/rpc.vala
++++ b/lib/base/rpc.vala
+@@ -15,12 +15,12 @@ namespace Frida {
+ 			string request_id = Uuid.string_random ();
+ 
+ 			var request = new Json.Builder ();
+-				request
+-					.begin_array ()
+-					.add_string_value ((string) GLib.Base64.decode("ZnJpZGE6cnBj="))
+-					.add_string_value (request_id)
+-					.add_string_value ("call")
+-					.add_string_value (method)
++			request
++				.begin_array ()
++				.add_string_value ((string) GLib.Base64.decode("ZnJpZGE6cnBj="))
++				.add_string_value (request_id)
++				.add_string_value ("call")
++				.add_string_value (method)
+ 				.begin_array ();
+ 			foreach (var arg in args)
+ 				request.add_value (arg);
+-- 
+2.39.0
+

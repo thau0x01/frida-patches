@@ -1,0 +1,51 @@
+From 25cbf2c8312bf1704b04afb2977c9bb31aae993e Mon Sep 17 00:00:00 2001
+From: hluwa <hluwa888@gmail.com>
+Date: Mon, 16 Aug 2021 10:55:11 +0800
+Subject: [PATCH 07/13] strongR-frida: string_frida_rpc
+
+---
+ lib/base/rpc.vala | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/lib/base/rpc.vala b/lib/base/rpc.vala
+index 28eede6a..542fe7cb 100644
+--- a/lib/base/rpc.vala
++++ b/lib/base/rpc.vala
+@@ -16,11 +16,11 @@ namespace Frida {
+ 
+ 			var request = new Json.Builder ();
+ 				request
+-						.begin_array ()
+-						.add_string_value ("frida:rpc")
+-						.add_string_value (request_id)
+-						.add_string_value ("call")
+-						.add_string_value (method)
++					.begin_array ()
++					.add_string_value ((string) GLib.Base64.decode("ZnJpZGE6cnBj="))
++					.add_string_value (request_id)
++					.add_string_value ("call")
++					.add_string_value (method)
+ 				.begin_array ();
+ 			foreach (var arg in args)
+ 				request.add_value (arg);
+@@ -70,7 +70,7 @@ namespace Frida {
+ 		}
+ 
+ 		public bool try_handle_message (string json) {
+-			if (json.index_of ("\"frida:rpc\"") == -1)
++			if (json.index_of ((string) GLib.Base64.decode("ImZyaWRhOnJwYyI=")) == -1)
+ 				return false;
+ 
+ 			var parser = new Json.Parser ();
+@@ -99,7 +99,7 @@ namespace Frida {
+ 				return false;
+ 
+ 			string? type = rpc_message.get_element (0).get_string ();
+-			if (type == null || type != "frida:rpc")
++			if (type == null || type != (string) GLib.Base64.decode("ZnJpZGE6cnBj="))
+ 				return false;
+ 
+ 			var request_id_value = rpc_message.get_element (1);
+-- 
+2.39.0
+
