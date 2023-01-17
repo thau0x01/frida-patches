@@ -1,7 +1,7 @@
 From 2ca9c0ea07a3b15a8dfd66b91cbc0407831fcc65 Mon Sep 17 00:00:00 2001
 From: hluwa <hluwa888@gmail.com>
 Date: Mon, 16 Aug 2021 10:55:11 +0800
-Subject: [PATCH 09/13] strongR-frida: symbol_frida_agent_main
+Subject: [PATCH 09/14] strongR-frida: symbol_frida_agent_main
 
 ---
  src/agent-container.vala              |  2 +-

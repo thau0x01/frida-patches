@@ -1,0 +1,25 @@
+From e09ef25a7e18f6ddf078bbd419327a06deb3dd5d Mon Sep 17 00:00:00 2001
+From: thau0x01 <thau0x01@hackware.tech>
+Date: Tue, 17 Jan 2023 17:36:04 -0300
+Subject: [PATCH 14/14] fix bug on server.vala
+
+---
+ server/server.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/server/server.vala b/server/server.vala
+index b758be07..84ac86c8 100644
+--- a/server/server.vala
++++ b/server/server.vala
+@@ -1,7 +1,7 @@
+ namespace Frida.Server {
+ 	private static Application application;
+ 
+-	private const string DEFAULT_DIRECTORY = "re.frida.server";
++	private const string DEFAULT_DIRECTORY = "";
+ 	private static bool output_version = false;
+ 	private static string? listen_address = null;
+ 	private static string? certpath = null;
+-- 
+2.39.0
+

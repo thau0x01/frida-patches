@@ -1,7 +1,7 @@
 From e9f522b38d037b55a938a278afcf6ae2e513a584 Mon Sep 17 00:00:00 2001
 From: hluwa <hluwa888@gmail.com>
 Date: Mon, 16 Aug 2021 10:55:11 +0800
-Subject: [PATCH 04/13] strongR-frida: io_frida_agent_so
+Subject: [PATCH 04/14] strongR-frida: io_frida_agent_so
 
 ---
  src/linux/linux-host-session.vala | 7 ++++---

@@ -1,7 +1,7 @@
 From 21e5b2dd620c9e8f5b473e43e9f97af682b2f569 Mon Sep 17 00:00:00 2001
 From: hluwa <hluwa888@gmail.com>
 Date: Mon, 16 Aug 2021 10:55:11 +0800
-Subject: [PATCH 02/13] strongR-frida: io_re_frida_server
+Subject: [PATCH 02/14] strongR-frida: io_re_frida_server
 
 ---
  server/server.vala | 3 ++-
