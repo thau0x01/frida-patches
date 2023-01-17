@@ -1,7 +1,7 @@
 From 157a2826cbabc5b0967eab32cf4c2419a64d9529 Mon Sep 17 00:00:00 2001
 From: hluwa <hluwa888@gmail.com>
 Date: Mon, 16 Aug 2021 10:55:11 +0800
-Subject: [PATCH 11/14] strongR-frida: thread_gmain
+Subject: [PATCH 11/15] strongR-frida: thread_gmain
 
 ---
  src/anti-anti-frida.py | 6 ++++++

@@ -1,7 +1,7 @@
 From 2080fdd8375ffc34afcceeba3898b7016f81e483 Mon Sep 17 00:00:00 2001
 From: hluwa <hluwa888@gmail.com>
 Date: Mon, 16 Aug 2021 10:55:11 +0800
-Subject: [PATCH 03/14] strongR-frida: pipe_linjector
+Subject: [PATCH 03/15] strongR-frida: pipe_linjector
 
 ---
  src/linux/frida-helper-backend-glue.c | 2 +-

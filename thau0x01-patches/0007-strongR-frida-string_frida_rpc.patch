@@ -1,7 +1,7 @@
 From 25cbf2c8312bf1704b04afb2977c9bb31aae993e Mon Sep 17 00:00:00 2001
 From: hluwa <hluwa888@gmail.com>
 Date: Mon, 16 Aug 2021 10:55:11 +0800
-Subject: [PATCH 07/14] strongR-frida: string_frida_rpc
+Subject: [PATCH 07/15] strongR-frida: string_frida_rpc
 
 ---
  lib/base/rpc.vala | 14 +++++++-------

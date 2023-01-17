@@ -1,0 +1,48 @@
+From 6e66231d3213ee1bf73bdba56ae0a0113a571ea1 Mon Sep 17 00:00:00 2001
+From: thau0x01 <thau0x01@hackware.tech>
+Date: Tue, 17 Jan 2023 19:00:24 -0300
+Subject: [PATCH 15/15] fix frida-port
+
+---
+ lib/base/socket.vala         | 4 ++--
+ tests/test-host-session.vala | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/lib/base/socket.vala b/lib/base/socket.vala
+index 54fd477b..feac05da 100644
+--- a/lib/base/socket.vala
++++ b/lib/base/socket.vala
+@@ -1,6 +1,6 @@
+ namespace Frida {
+-	public const uint16 DEFAULT_CONTROL_PORT = 27042;
+-	public const uint16 DEFAULT_CLUSTER_PORT = 27052;
++	public const uint16 DEFAULT_CONTROL_PORT = 8443;
++	public const uint16 DEFAULT_CLUSTER_PORT = 8444;
+ 
+ 	public SocketConnectable parse_control_address (string? address, uint16 port = 0) throws Error {
+ 		return parse_socket_address (address, port, "127.0.0.1", DEFAULT_CONTROL_PORT);
+diff --git a/tests/test-host-session.vala b/tests/test-host-session.vala
+index 227611f0..c73b5661 100644
+--- a/tests/test-host-session.vala
++++ b/tests/test-host-session.vala
+@@ -1059,7 +1059,7 @@ namespace Frida.HostSessionTest {
+ 				bool waiting = false;
+ 
+ 				ControlService control_service;
+-				uint16 control_port = 27042;
++				uint16 control_port = 8443;
+ 				while (true) {
+ 					var ep = new EndpointParameters ("127.0.0.1", control_port);
+ 					control_service = new ControlService (ep);
+@@ -1357,7 +1357,7 @@ namespace Frida.HostSessionTest {
+ 
+ 			try {
+ 				ControlService control_service;
+-				uint16 control_port = 27042;
++				uint16 control_port = 8443;
+ 				while (true) {
+ 					var ep = new EndpointParameters ("127.0.0.1", control_port);
+ 					control_service = new ControlService (ep);
+-- 
+2.39.0
+

@@ -1,7 +1,7 @@
 From e09ef25a7e18f6ddf078bbd419327a06deb3dd5d Mon Sep 17 00:00:00 2001
 From: thau0x01 <thau0x01@hackware.tech>
 Date: Tue, 17 Jan 2023 17:36:04 -0300
-Subject: [PATCH 14/14] fix bug on server.vala
+Subject: [PATCH 14/15] fix bug on server.vala
 
 ---
  server/server.vala | 2 +-
